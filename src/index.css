@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tailwind styles */
+
+body{
+  @apply text-white bg-[#090A0F] tracking-wider font-sans;
+}
+
+
+/* Custom CSS */
+
+.universe {
+  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+}
+
+.stars-s,
+.stars-m,
+.stars-l {
+  position: absolute;
+  z-index: 1;
+  background: white;
+}
+
+.stars-s {
+  width: 1px;
+  height: 1px;
+  animation: animate-star 9000s linear infinite;
+}
+    
+.stars-s:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 1px;
+  height: 1px;
+  background: transparent;
+}
+    
+.stars-m {
+  width: 2px;
+  height: 2px;
+  animation: animate-star 4000s linear infinite;
+}
+
+.stars-m:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 2px;
+  height: 2px;
+  background: transparent;
+}
+
+.stars-l {
+  width: 3px;
+  height: 3px;
+  animation: animate-star 900s linear infinite;
+}
+
+.stars-l:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 3px;
+  height: 3px;
+  background: transparent;
+}
+    
+    
+@keyframes animate-star {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}
